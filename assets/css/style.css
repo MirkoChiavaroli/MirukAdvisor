@@ -1,0 +1,200 @@
+/* _-----_BODY or GENERAL_-----_ */
+body {
+  font-family: "Trip Sans Reg";
+}
+:root {
+  --vert-logo: rgb(96, 225, 161);
+  --button-black: rgb(0, 0, 0);
+  --coral-evidences: rgb(
+    237,
+    91,
+    94
+  ); /*creo var per avere sempre lo stesso colore senza andarlo a cercare */
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* _-----_HEADER_-----_ */
+header {
+  /* background-color: blue; */
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  width: 190px;
+  height: 43px;
+  margin-top: 12.5px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav div {
+  margin-right: 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+header button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 11px 23px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+}
+header button:hover {
+  background-color: #5fe0a0;
+  color: black;
+}
+
+/* _-----_MAIN_-----_ */
+
+h1 {
+  font-family: "Trip Sans Med";
+  font-size: 54px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+h1 span {
+  color: var(--coral-evidences);
+}
+/* ACTIVITIES */
+.activities {
+  display: flex;
+  margin-top: 25px;
+}
+.activities div {
+  border: black solid 1px;
+  flex: 1;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer; /*mette l'indice quando si passa sopra elemento*/
+}
+.activities div:not(:last-child) {
+  margin-right: 20px;
+}
+.activities span {
+  margin-right: 10px;
+  max-width: 80px;
+  overflow: hidden; /*nasconde elemento eccedente*/
+  text-overflow: ellipsis; /*add punti a testo eccedente*/
+}
+.activities div:hover {
+  background-color: var(--button-black); /*chiamo var*/
+  color: white;
+}
+/* PICS */
+/*mi creo una box vuota e ci aggiungo le foto*/
+.pictures {
+  height: 432px;
+  /* background-color: yellowgreen; */
+  margin-top: 25px;
+  display: flex;
+}
+/*pic-1 prende il 100% dell'altezza del box pic*/
+.pictures .pic-1 {
+  height: 100%;
+  flex: 1;
+  margin-right: 2px;
+  /* background-color: violet; */
+}
+/*pic-2 prende il 50% dell'altezza del box pic, ma invece di una foto ne aggiungo due*/
+.pictures .pic-2 {
+  height: 50%;
+  width: 50%;
+  /* background-color: rgb(237, 91, 94); */
+}
+
+.pictures .pic-1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.pictures .pic-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pictures .col-2 img:last-child {
+  margin-top: 2px;
+}
+
+/* NAV VISITER */
+ol {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  font-size: 12px;
+}
+.visiter {
+  align-items: flex-end;
+}
+
+/* BOX */
+.box {
+  height: 450px;
+  /* background-color: yellowgreen; */
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.box-1 {
+  width: 545px;
+  height: 200px;
+  /* background-color: #5fe0a0; */
+}
+.box-2 {
+  width: 450px;
+  height: 465px;
+  background-color: rgb(237, 91, 94);
+  border-radius: 20px;
+}
+.box-1 h2 {
+  font-size: 28px;
+  font-family: "Trip Sans Med";
+}
+.box-1 p {
+  font-size: 20px;
+  margin-top: 27px;
+  text-align: justify;
+}
+.box-2 h2 {
+  font-size: 32px;
+  font-family: "Trip Sans Med";
+  margin-top: 39px;
+  margin-left: 33px;
+}
+.box-2 p {
+  font-size: 16px;
+  margin-top: 39px;
+  margin-left: 33px;
+  text-align: justify;
+}
+.box-2 button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 11px 23px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 39px;
+  margin-left: 33px;
+}
+.box-2 button:hover {
+  background-color: #5fe0a0;
+  color: black;
+}
+.box-2 img {
+  width: 450px;
+  height: 178px;
+  object-fit: cover;
+  margin-top: 32px;
+}

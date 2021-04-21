@@ -5,11 +5,8 @@ body {
 :root {
   --vert-logo: rgb(96, 225, 161);
   --button-black: rgb(0, 0, 0);
-  --coral-evidences: rgb(
-    237,
-    91,
-    94
-  ); /*creo var per avere sempre lo stesso colore senza andarlo a cercare */
+  --coral-evidences: rgb(237, 91, 94);
+  /*creo var per avere sempre lo stesso colore senza andarlo a cercare */
 }
 .container {
   width: 1140px;
@@ -24,13 +21,12 @@ header {
   justify-content: space-between;
 }
 header img {
-  width: 190px;
-  height: 43px;
+  /* height: 43px; */
   margin-top: 12.5px;
 }
 header nav {
   display: flex;
-  align-items: center;
+  align-items: center; /* allineamento orizzontale; */
 }
 header nav div {
   margin-right: 20px;
@@ -100,30 +96,31 @@ h1 span {
 /*pic-1 prende il 100% dell'altezza del box pic*/
 .pictures .pic-1 {
   height: 100%;
-  flex: 1;
+  flex: 1; /*piu importante e piu grande rispetto alle altre*/
   margin-right: 2px;
   /* background-color: violet; */
 }
-/*pic-2 prende il 50% dell'altezza del box pic, ma invece di una foto ne aggiungo due*/
+/*pic-2 prende il 100% dell'altezza del box pic, ma invece di una foto ne aggiungo due*/
 .pictures .pic-2 {
-  height: 50%;
+  height: 100%;
   width: 50%;
   /* background-color: rgb(237, 91, 94); */
 }
-
+/*pic-1 img prende il 100% dell'altezza e della laeghezza della box pic1 */
 .pictures .pic-1 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+/*pic-2 img prende il 100% della larghezza della box pic2 e il 50% - 1 (margini) per l'altezza */
 .pictures .pic-2 img {
-  height: 100%;
+  height: calc(50% - 1px);
   width: 100%;
   object-fit: cover;
   display: block;
 }
-.pictures .col-2 img:last-child {
-  margin-top: 2px;
+.pictures .pic-2 img:last-child {
+  margin-top: 2px; /*l'ultima foto prende il margine superiore */
 }
 
 /* NAV VISITER */

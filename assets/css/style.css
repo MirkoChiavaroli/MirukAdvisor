@@ -13,15 +13,37 @@ body {
   margin: 0 auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 28px;
+  font-family: "Trip Sans Med";
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "Trip Sans Med";
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
 /* _-----_HEADER_-----_ */
 header {
   /* background-color: blue; */
   height: 70px;
   display: flex;
   justify-content: space-between;
+  /* position: fixed;
+  width: 100%;
+  top: 0; */
 }
 header img {
-  /* height: 43px; */
+  height: 43px;
   margin-top: 12.5px;
 }
 header nav {
@@ -48,6 +70,9 @@ header button:hover {
 }
 
 /* _-----_MAIN_-----_ */
+/* main {
+  margin-top: 70px;
+} */
 
 h1 {
   font-family: "Trip Sans Med";
@@ -97,7 +122,7 @@ h1 span {
 .pictures .pic-1 {
   height: 100%;
   flex: 1; /*piu importante e piu grande rispetto alle altre*/
-  margin-right: 2px;
+  margin-right: 3px;
   /* background-color: violet; */
 }
 /*pic-2 prende il 100% dell'altezza del box pic, ma invece di una foto ne aggiungo due*/
@@ -134,7 +159,7 @@ ol {
   align-items: flex-end;
 }
 
-/* BOX */
+/* informations */
 .box {
   height: 450px;
   /* background-color: yellowgreen; */
@@ -159,6 +184,7 @@ ol {
 }
 .box-1 p {
   font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 27px;
   text-align: justify;
 }
@@ -194,4 +220,101 @@ ol {
   height: 178px;
   object-fit: cover;
   margin-top: 32px;
+}
+
+/* les immanquables */
+.imma h2 {
+  margin-top: 95px;
+}
+/* text et carosello */
+.immanquables {
+  height: 400px;
+  background-color: yellowgreen;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: flex;
+}
+.block-text {
+  width: 25%;
+  height: 100%;
+  background-color: #5fe0a0;
+}
+.block-text p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.carosello {
+  border: black solid 2px;
+  box-sizing: border-box;
+  height: 100%;
+  width: calc(100% / 3 - (40px / 3));
+  flex-shrink: 0;
+}
+.carosello-0 {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+.immanquables .carosello-0 div {
+  width: 270px;
+  height: 205px;
+  background-color: rgb(237, 91, 94);
+  border: black solid 2px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+.carosello-0 div:last-child {
+  margin-right: 0px; /*l'ultima foto prende il margine superiore */
+}
+/*
+.block-text p {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 27px;
+  text-align: justify;
+}
+.block-text button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 11px 23px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+} */
+
+/* guides */
+/* .guides {
+  height: 430px;
+  background-color: #5fe0a0;
+  display: flex;
+}
+
+.guides-pic img {
+  width: 370px;
+  height: 280px;
+  object-fit: cover;
+}
+.pictures .pic-2 div:not(:first-child) {
+  margin-left: 16px;
+} */
+
+/* elements HTML hidden */
+.hidden div {
+  display: none;
+}
+
+/* media queries */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hidden {
+    display: none;
+  }
 }

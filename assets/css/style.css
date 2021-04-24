@@ -11,6 +11,8 @@ body {
 .container {
   width: 1140px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 html {
@@ -30,6 +32,16 @@ h3 {
 p {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+}
+a:hover {
+  color: #5fe0a0;
+  text-decoration: underline;
 }
 
 /* _-----_HEADER_-----_ */
@@ -93,6 +105,7 @@ h1 span {
   flex: 1;
   padding: 25px;
   border-radius: 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   cursor: pointer; /*mette l'indice quando si passa sopra elemento*/
@@ -107,7 +120,7 @@ h1 span {
   text-overflow: ellipsis; /*add punti a testo eccedente*/
 }
 .activities div:hover {
-  background-color: var(--button-black); /*chiamo var*/
+  background-color: #5fe0a0;
   color: white;
 }
 /* PICS */
@@ -166,6 +179,7 @@ ol {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 55px;
 }
 .box-1 {
   width: 545px;
@@ -174,9 +188,10 @@ ol {
 }
 .box-2 {
   width: 450px;
-  height: 465px;
+  height: 450px;
   background-color: rgb(237, 91, 94);
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .box-1 h2 {
   font-size: 28px;
@@ -219,89 +234,173 @@ ol {
   width: 450px;
   height: 178px;
   object-fit: cover;
-  margin-top: 32px;
+  margin-top: 39px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-/* les immanquables */
-.imma h2 {
-  margin-top: 95px;
-}
-/* text et carosello */
-.immanquables {
-  height: 400px;
-  background-color: yellowgreen;
+/* must */
+.must > div {
+  height: 350px;
+  width: 100%;
+  /* background-color: #5fe0a0; */
   margin-top: 25px;
-  margin-bottom: 50px;
   display: flex;
+  justify-content: space-between;
 }
-.block-text {
+.must .block-1 {
   width: 25%;
   height: 100%;
-  background-color: #5fe0a0;
+  /* background-color: var(--coral-evidences); */
 }
-.block-text p {
-  margin-top: 25px;
-  margin-bottom: 25px;
+.must .block-2 {
+  width: 70%;
+  height: 100%;
+  /* background-color: var(--vert-logo); */
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
 }
-.carosello {
-  border: black solid 2px;
+.block-1 p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.block-carosello {
+  /* border: black solid 2px; */
   box-sizing: border-box;
   height: 100%;
   width: calc(100% / 3 - (40px / 3));
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
-.carosello-0 {
+.block-carosello:not(:last-child) {
+  margin-right: 20px;
+}
+.block-carosello img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  margin-top: -25px;
+}
+.block-carosello .pictures {
+  position: relative;
+}
+.block-carosello .circle {
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
   display: flex;
-  overflow: hidden;
-  overflow-x: scroll;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -20px;
+  right: 10px;
 }
-.immanquables .carosello-0 div {
-  width: 270px;
-  height: 205px;
-  background-color: rgb(237, 91, 94);
-  border: black solid 2px;
-  flex-shrink: 0;
-  margin-right: 16px;
+.block-carosello img:nth-child(3) {
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 150px;
+  left: 10px;
 }
-.carosello-0 div:last-child {
-  margin-right: 0px; /*l'ultima foto prende il margine superiore */
-}
-/*
-.block-text p {
-  font-size: 18px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin-top: 27px;
-  text-align: justify;
-}
-.block-text button {
-  border: none;
-  background-color: black;
-  color: white;
-  padding: 11px 23px;
-  border-radius: 20px;
-  cursor: pointer;
+.block-carosello a {
+  margin-top: 190px;
+  position: absolute;
+  font-weight: 700;
   font-size: 17px;
-} */
-
-/* guides */
-/* .guides {
-  height: 430px;
-  background-color: #5fe0a0;
-  display: flex;
+}
+.block-carosello .fas {
+  margin-top: 210px;
+  position: absolute;
+  color: #5fe0a0;
+}
+.block-carosello .tour {
+  margin-top: 230px;
+  position: absolute;
+  font-weight: 700;
+  font-size: 14px;
 }
 
-.guides-pic img {
-  width: 370px;
-  height: 280px;
+/* <!-- Guides de voyageurs --> */
+
+.guides > div {
+  height: 450px;
+  width: 100%;
+  /* background-color: #5fe0a0; */
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.guides .block-g {
+  width: 32%;
+  height: 100%;
+  /* background-color: var(--coral-evidences); */
+}
+
+.pictures-g img {
+  width: 100%;
   object-fit: cover;
 }
-.pictures .pic-2 div:not(:first-child) {
-  margin-left: 16px;
-} */
+.pictures-g a {
+  font-size: 21px;
+  margin-top: 5px;
+  font-family: "Trip Sans Med";
+}
+.pictures-g p {
+  font-size: 15px;
+  margin-top: 10px;
+  font-family: "Trip Sans Reg";
+  align-items: center;
+}
+.pictures-g .topito-logo {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+span {
+  font-family: "Trip Sans Med";
+}
+.pictures-g .sponsor {
+  display: flex;
+  align-items: center;
+}
+
+/* footer */
+
+footer {
+  height: 100px;
+  background-color: white;
+  border-top: solid 3px var(--vert-logo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 50px;
+}
+footer a {
+  font-family: "Trip Sans Med";
+}
+footer p {
+  font-family: "Trip Sans Reg";
+  font-size: 15px;
+}
+footer img {
+  width: 35px;
+  margin-right: 10px;
+}
 
 /* elements HTML hidden */
 .hidden div {
+  display: none;
+}
+.activities div:nth-child(7) {
   display: none;
 }
 
@@ -309,12 +408,52 @@ ol {
 @media (max-width: 1024px) {
   .container {
     width: 100%;
-    padding: 0 20px;
   }
 }
 
 @media (max-width: 1024px) {
   .hidden {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .activities {
+    flex-wrap: wrap;
+  }
+
+  .activities div:nth-child(7) {
+    display: flex;
+  }
+
+  .activities div:not(:last-child) {
+    margin-right: 0px;
+  }
+  .activities div {
+    width: 25%;
+    flex: none;
+  }
+  .activities div:nth-child(1) {
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+  .activities div:nth-child(2) {
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+  .activities div:nth-child(3) {
+    margin-bottom: 16px;
+    margin-right: 16px;
+  }
+  .activities div:nth-child(4) {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .pictures .pic-1 {
+    width: 100%;
+    /*piu importante e piu grande rispetto alle altre*/
+
+    /* background-color: violet; */
   }
 }
